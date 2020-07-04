@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      runtime: openjdk8
+    commands:
+      - echo install
+  pre_build:
+    commands:
+      - echo pre_build
+  build:
+    commands:
+      - mvn package
+      - echo build
+  post_build:
+    commands:
+      - echo post_build
+
+artifacts:
+  files:
+    - target/spring-boot-todo-rest-api-h2-aws-code-pipeline-0.0.1-SNAPSHOT.jar
